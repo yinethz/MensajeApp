@@ -1,0 +1,25 @@
+.layout {
+    --firstColumn: 27.5 rem;
+    --footer: 100vh;
+    --black: green;
+    border: 10px solid red;
+    display: grid;
+    grid-template-columns: var(--firstColumn) 1fr;
+    grid-template-areas: "user-list chat" "user-list footer";
+    block-size: 100vh;
+    box-sizing: border-box;
+}
+
+footer {
+    grid-area: foote;
+    border: 10px solid purple;
+    overflow: auto;
+}
+
+@media screen and (max-width: 100px) {
+    .layout {
+        grid-template-areas: "user-list footer" "user-list chat";
+        grid-template-rows: var(--footer) 1fr;
+    }
+}
+
